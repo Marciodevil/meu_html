@@ -1,0 +1,52 @@
+<!			Fontes
+
+Função Random: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+
+Script no cabeçalho: /JScript/JScript016.htm
+
+onClick Vs hRef: https://stackoverflow.com/questions/5025941/is-there-a-way-to-get-a-button-element-to-link-to-a-location-without-wrapping
+
+>
+
+<html>
+<head>
+	
+	<title>Atividade 2</title>
+	
+	<SCRIPT LANGUAGE="JavaScript">
+    
+		function getRandomIntInclusive(min, max) {
+			min = Math.ceil(min);
+			max = Math.floor(max);
+			return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+     
+    function Resultados(){
+ 			var x;
+ 			var n = eval(document.gerador.qtdeN.value);
+			document.write('<b>Impressão de linhas numeradas usando o for</b><hr>');
+			for (x=1; x<=n; x++) 
+			document.write(+ x + '° número aleatório: ' + getRandomIntInclusive(1, 100) + '<br />');
+			document.write('<hr>');
+		}
+		
+  </SCRIPT>
+
+</head>
+
+<body align="center" bgcolor="Black">
+	
+        <h1> <font color="white">Gerador de Aleatórios</font></h1>
+        <h4> <font color="grey">Felipe Souza Vieira, Turma 2</font></h4>
+		
+		<form name="gerador">
+		<div>
+			<label><font color="grey">Quantidade:</label>
+			<input type="text" name="qtdeN" />
+		</div>
+		<div class="button">
+			<button onclick="Resultados();">Gerar</button>
+		</div>
+	</form>
+</body>
+</html>
